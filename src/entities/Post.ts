@@ -8,7 +8,6 @@ export interface IPost {
   dateCreated: Date;
   dateUpdated: Date;
   title: string;
-  content: string;
 }
 
 export class Post implements IPost {
@@ -16,7 +15,6 @@ export class Post implements IPost {
   public dateCreated: Date;
   public dateUpdated: Date;
   public title: string;
-  public content: string;
 
   constructor(
     id: string,
@@ -28,6 +26,5 @@ export class Post implements IPost {
     this.dateCreated = dateCreated;
     this.dateUpdated = dateUpdated;
     this.title = properties[IPostProperties.title]['title'][0]['plain_text']; // am sure there's a better way to do this.
-    this.content = properties;
   }
 }
